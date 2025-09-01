@@ -7,136 +7,132 @@
     <style>
         @font-face {
             font-family: 'Gagalin';
-            src: url('https://db.onlinewebfonts.com/t/76d749e6e3f7f714f3bc4d7ea0b1e9e7.woff') format('woff');
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Gagalin', sans-serif;
+            src: url('path/to/gagalin.woff2') format('woff2'),
+                 url('path/to/gagalin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
 
         body {
+            margin: 0;
+            font-family: 'Gagalin', sans-serif;
             background-color: #000;
             color: #fff;
-            text-align: center;
-            overflow-x: hidden;
         }
 
         .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            background: linear-gradient(45deg, #ff6200, #ffd700);
-            background-size: 200% 200%;
-            animation: gradientAnimation 5s ease infinite;
-        }
-
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            color: #000;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #000;
             animation: fadeIn 2s ease-in;
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #f5a623;
+            margin: 20px 0;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
         }
 
         .hero img {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             margin: 20px 0;
-            border: 3px solid #fff;
-            animation: scaleIn 1.5s ease;
+            border: 3px solid #f5a623;
+            animation: pulse 3s infinite;
         }
 
-        @keyframes scaleIn {
-            0% { transform: scale(0); }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
-        .hero p {
+        p {
+            font-size: 1.2em;
+            color: #fff;
             max-width: 600px;
-            font-size: 1.2rem;
-            color: #000;
-            margin: 20px 0;
+            margin: 20px auto;
             line-height: 1.6;
-            animation: fadeIn 2s ease-in 0.5s;
-            animation-fill-mode: both;
         }
 
         .buttons {
-            display: flex;
-            gap: 20px;
-            margin: 20px 0;
+            margin: 30px 0;
         }
 
         .button {
-            background-color: #ff6200;
-            color: #000;
+            display: inline-block;
             padding: 10px 20px;
+            margin: 10px;
+            background-color: #f5a623;
+            color: #000;
+            font-size: 1em;
+            border: none;
             border-radius: 5px;
-            font-size: 1.2rem;
             cursor: default;
-            animation: fadeIn 2s ease-in 1s;
-            animation-fill-mode: both;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
 
         .connect {
-            margin: 40px 0;
-            font-size: 2rem;
-            color: #ffd700;
-            animation: fadeIn 2s ease-in 1.5s;
-            animation-fill-mode: both;
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
         }
 
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+        .connect h2 {
+            font-size: 2em;
+            color: #f5a623;
+            margin-bottom: 20px;
         }
 
-        .social-buttons a img {
+        .connect a {
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .connect img {
             width: 40px;
             height: 40px;
             transition: transform 0.3s ease;
         }
 
-        .social-buttons a img:hover {
+        .connect img:hover {
             transform: scale(1.2);
         }
     </style>
 </head>
 <body>
-    <section class="hero">
+    <div class="hero">
         <h1>WAYNΞ</h1>
-        <img src="photo_2025-09-01_03-19-28.jpg" alt="Wayne Profile">
+        <img src="photo_2025-09-01_03-19-28.jpg" alt="WAYNE Profile Picture">
         <p>I'm a passionate Web3 enthusiast and decentralization advocate, committed to driving blockchain adoption and impact across Africa and beyond. With a strong background in community management, I’ve led thriving, resilient communities and spearheaded strategies that foster sustainable ecosystem growth. As a business development expert and Key Opinion Leader, I focus on forging strategic partnerships, expanding Web3 ecosystems, and empowering communities through innovation, education, and decentralized technologies.</p>
         <div class="buttons">
             <div class="button">Community Manager</div>
             <div class="button">Growth Lead</div>
             <div class="button">Social Strategist</div>
         </div>
-        <div class="connect">Let's Connect</div>
-        <div class="social-buttons">
-            <a href="mailto:yusufrazak34@gmail.com"><img src="mail logo.png" alt="Email"></a>
-            <a href="https://x.com/WayneKrypt"><img src="telegram-logo-black-and-white.png" alt="Telegram"></a>
-            <a href="https://x.com/WayneKrypt"><img src="logo.webp" alt="X Profile"></a>
-        </div>
-    </section>
+    </div>
+    <div class="connect">
+        <h2>Let's Connect</h2>
+        <a href="mailto:yusufrazak34@gmail.com"><img src="mail logo.png" alt="Email"></a>
+        <a href="https://x.com/WayneKrypt"><img src="telegram-logo-black-and-white.png" alt="Telegram"></a>
+        <a href="https://x.com/WayneKrypt"><img src="logo.webp" alt="X Profile"></a>
+    </div>
 </body>
 </html>
