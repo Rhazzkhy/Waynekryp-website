@@ -6,119 +6,85 @@
     <title>WAYNE</title>
     <link href="https://fonts.cdnfonts.com/css/gagalin" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Gagalin', sans-serif;
-        }
-
         body {
-            background-color: #000;
+            margin: 0;
+            font-family: 'Gagalin', sans-serif;
             color: #fff;
+            background-color: #000;
         }
-
         .hero {
             background-color: #000;
+            text-align: center;
+            padding: 50px 20px;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 20px;
+            align-items: center;
         }
-
         .hero h1 {
-            color: #ff6200; /* Orange */
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 4em;
+            color: #f5a623;
+            margin: 0;
             animation: glow 2s ease-in-out infinite alternate;
         }
-
         @keyframes glow {
             from {
-                text-shadow: 0 0 10px #ff6200, 0 0 20px #ff6200, 0 0 30px #ff6200;
+                text-shadow: 0 0 10px #f5a623, 0 0 20px #f5a623, 0 0 30px #ff4500;
             }
             to {
-                text-shadow: 0 0 20px #ffc107, 0 0 30px #ffc107, 0 0 40px #ffc107;
+                text-shadow: 0 0 20px #ff4500, 0 0 30px #f5a623, 0 0 40px #ff4500;
             }
         }
-
         .hero img {
             max-width: 200px;
-            border: 5px solid #ffc107; /* Yellow */
-            border-radius: 10px;
+            border-radius: 50%;
             margin: 20px 0;
-            animation: framePulse 3s ease-in-out infinite;
+            border: 3px solid #ff4500;
+            animation: frame-pulse 3s ease-in-out infinite;
         }
-
-        @keyframes framePulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 10px #ff6200;
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 0 20px #ffc107;
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 10px #ff6200;
-            }
+        @keyframes frame-pulse {
+            0% { box-shadow: 0 0 10px #f5a623; }
+            50% { box-shadow: 0 0 20px #ff4500; }
+            100% { box-shadow: 0 0 10px #f5a623; }
         }
-
         .hero p {
-            color: #fff;
-            font-size: 1.2rem;
+            font-size: 1.2em;
+            color: #f5a623;
             max-width: 600px;
-            margin: 20px 0;
-            line-height: 1.6;
+            margin: 20px auto;
         }
-
-        .buttons {
+        .role-buttons {
             display: flex;
             gap: 20px;
             margin: 20px 0;
         }
-
-        .buttons button {
-            background-color: #ff6200; /* Orange */
-            color: #000;
-            border: none;
+        .role-button {
+            background-color: #ff4500;
+            color: #fff;
             padding: 10px 20px;
-            font-size: 1rem;
+            border: none;
             border-radius: 5px;
+            font-size: 1em;
             cursor: default;
-            animation: buttonGlow 2s ease-in-out infinite alternate;
         }
-
-        @keyframes buttonGlow {
-            from {
-                box-shadow: 0 0 5px #ff6200;
-            }
-            to {
-                box-shadow: 0 0 15px #ffc107;
-            }
+        .connect {
+            margin-top: 40px;
         }
-
-        .social-links {
-            position: fixed;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
+        .connect h2 {
+            font-size: 2em;
+            color: #f5a623;
         }
-
-        .social-links a {
-            margin: 0 10px;
+        .social-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
         }
-
-        .social-links img {
+        .social-button img {
             width: 40px;
             transition: transform 0.3s;
         }
-
-        .social-links img:hover {
+        .social-button img:hover {
             transform: scale(1.2);
         }
     </style>
@@ -126,24 +92,29 @@
 <body>
     <section class="hero">
         <h1>WAYNΞ</h1>
-        <img src="photo_2025-09-01_03-19-28.jpg" alt="WAYNE Profile Picture">
-        <p>I'm a passionate Web3 enthusiast and decentralization advocate, committed to driving blockchain adoption and impact across Africa and beyond. With a strong background in community management, I’ve led thriving, resilient communities and spearheaded strategies that foster sustainable ecosystem growth. As a business development expert and Key Opinion Leader, I focus on forging strategic partnerships, expanding Web3 ecosystems, and empowering communities through innovation, education, and decentralized technologies.</p>
-        <div class="buttons">
-            <button>Community Manager</button>
-            <button>Growth Lead</button>
-            <button>Social Strategist</button>
+        <img src="photo_2025-09-01_03-19-28.jpg" alt="Wayne's Profile Picture">
+        <p>
+            I'm a passionate Web3 enthusiast and decentralization advocate, committed to driving blockchain adoption and impact across Africa and beyond. With a strong background in community management, I’ve led thriving, resilient communities and spearheaded strategies that foster sustainable ecosystem growth. As a business development expert and Key Opinion Leader, I focus on forging strategic partnerships, expanding Web3 ecosystems, and empowering communities through innovation, education, and decentralized technologies.
+        </p>
+        <div class="role-buttons">
+            <button class="role-button">Community Manager</button>
+            <button class="role-button">Growth Lead</button>
+            <button class="role-button">Social Strategist</button>
+        </div>
+        <div class="connect">
+            <h2>Let's Connect</h2>
+            <div class="social-buttons">
+                <a href="mailto:yusufrazak34@gmail.com" class="social-button">
+                    <img src="mail_logo.png" alt="Email">
+                </a>
+                <a href="https://x.com/WayneKrypt" class="social-button">
+                    <img src="telegram-logo-black-and-white.png" alt="Telegram">
+                </a>
+                <a href="https://x.com/WayneKrypt" class="social-button">
+                    <img src="logo.webp" alt="Social Media">
+                </a>
+            </div>
         </div>
     </section>
-    <div class="social-links">
-        <a href="mailto:yusufrazak34@gmail.com">
-            <img src="mail logo.png" alt="Email">
-        </a>
-        <a href="https://x.com/WayneKrypt" target="_blank">
-            <img src="telegram-logo-black-and-white.png" alt="Telegram">
-        </a>
-        <a href="https://x.com/WayneKrypt" target="_blank">
-            <img src="logo.webp" alt="X Profile">
-        </a>
-    </div>
 </body>
 </html>
