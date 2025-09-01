@@ -1,1 +1,115 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAYNE</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .hero {
+            background-color: #000;
+            text-align: center;
+            padding: 50px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 4em;
+            color: #ffa500; /* Orange */
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffa500, 0 0 20px #ffa500, 0 0 30px #ff0; /* Yellow */
+            }
+            to {
+                text-shadow: 0 0 20px #ffa500, 0 0 30px #ff0, 0 0 40px #ff0;
+            }
+        }
+        .hero img {
+            max-width: 200px;
+            border: 5px solid #ffa500;
+            border-radius: 50%;
+            margin: 20px 0;
+            animation: framePulse 3s ease-in-out infinite;
+        }
+        @keyframes framePulse {
+            0% { border-color: #ffa500; }
+            50% { border-color: #ff0; }
+            100% { border-color: #ffa500; }
+        }
+        .hero p {
+            max-width: 600px;
+            font-size: 1.2em;
+            color: #ff0; /* Yellow */
+            margin: 20px auto;
+        }
+        .role-buttons {
+            margin: 20px 0;
+        }
+        .role-button {
+            background-color: #ffa500;
+            color: #000;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: default;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .role-button:hover {
+            transform: scale(1.1);
+        }
+        .footer {
+            background-color: #000;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .contact-button {
+            background-color: #ff0; /* Yellow */
+            color: #000;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .contact-button:hover {
+            background-color: #ffa500; /* Orange */
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>WAYNΞ</h1>
+        <img src="photo_2025-09-01_03-19-28.jpg" alt="Wayne's Photo">
+        <p>I'm a passionate Web3 enthusiast and decentralization advocate, committed to driving blockchain adoption and impact across Africa and beyond. With a strong background in community management, I’ve led thriving, resilient communities and spearheaded strategies that foster sustainable ecosystem growth. As a business development expert and Key Opinion Leader, I focus on forging strategic partnerships, expanding Web3 ecosystems, and empowering communities through innovation, education, and decentralized technologies.</p>
+        <div class="role-buttons">
+            <span class="role-button">Community Manager</span>
+            <span class="role-button">Growth Lead</span>
+            <span class="role-button">Social Strategist</span>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="mailto:yusufrazak34@gmail.com" class="contact-button">Email</a>
+        <a href="https://t.me/WayneKrypt" class="contact-button">Telegram</a>
+        <a href="https://x.com/WayneKrypt" class="contact-button">X</a>
+    </div>
+</body>
+</html>
